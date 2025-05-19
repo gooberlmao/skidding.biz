@@ -1,96 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hall of Autism - skidding.biz</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* Custom styles for Inter font and animations */
-        body {
-            font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hall of Autism - skidding.biz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
 
-        /* Animation for the logo (adjust if needed, but good for consistency) */
-        .logo-animate {
-            opacity: 0;
-            transform: translateY(-20px);
-            animation: slideDown 0.7s ease-out 0.2s forwards; /* 0.2s delay */
-        }
+        .logo-animate {
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: slideDown 0.7s ease-out 0.2s forwards;
+        }
 
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-        /* Style for a subtle text shadow, common in dark themes */
-        .text-shadow {
-            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
-        }
-    </style>
+        .text-shadow {
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        }
+    </style>
 </head>
-<body class="bg-gray-900 text-gray-200">
+<body class="bg-gray-900 text-gray-200 dark:bg-white dark:text-gray-900">
 
-    <header class="py-6 px-4 sm:px-6 lg:px-8 shadow-lg bg-gray-800/50 backdrop-blur-md sticky top-0 z-50">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="text-3xl font-bold text-purple-400 logo-animate">
-                <a href="/" class="hover:text-purple-300 transition-colors duration-300">skidding.biz</a>
-            </div>
-            <nav class="space-x-6">
-                <a href="/op" class="text-lg text-gray-300 hover:text-purple-400 transition-colors duration-300">Our People</a>
-                <a href="/hoa" class="text-lg text-purple-400 hover:text-purple-300 transition-colors duration-300">Hall of Autism</a>
-            </nav>
-        </div>
-    </header>
+<header class="py-6 px-4 sm:px-6 lg:px-8 shadow-lg bg-gray-800/50 backdrop-blur-md sticky top-0 z-50 flex justify-between items-center">
+    <div class="text-3xl font-bold text-purple-400 logo-animate">
+        <a href="/" class="hover:text-purple-300 transition-colors duration-300">skidding.biz</a>
+    </div>
 
-    <main class="container mx-auto mt-8 sm:mt-12 px-4 sm:px-6 lg:px-8">
+    <nav class="space-x-6 hidden sm:flex">
+        <a href="/op" class="text-lg text-gray-300 hover:text-purple-400 transition-colors duration-300">Our People</a>
+        <a href="/hoa" class="text-lg text-purple-400 hover:text-purple-300 transition-colors duration-300">Hall of Autism</a>
+    </nav>
 
-        <section class="py-12 sm:py-16 md:py-20 text-center">
-            <h1 class="text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-6 text-shadow">
-                The <span class="text-purple-400">Hall of Autism</span>
-            </h1>
-            <p class="text-xl sm:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-                Celebrating the... unique contributions to the digital landscape.
-            </p>
-        </section>
+    <button id="darkModeToggle" 
+            class="ml-4 px-3 py-1 rounded bg-purple-600 hover:bg-purple-700 text-white text-sm focus:outline-none">
+        🌙 Dark Mode
+    </button>
+</header>
 
-        <section class="py-8 sm:py-12 md:py-16">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-8 text-shadow text-center">Inductees</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-purple-500/30 transition-shadow duration-300">
-                    <div class="w-24 h-24 rounded-full mx-auto mb-4 flex items-center justify-center bg-gray-700 text-gray-400 border-2 border-purple-400 text-sm font-semibold">
-                        No Image
-                    </div>
-                    <h3 class="text-2xl font-semibold text-white mb-1">0x11</h3>
-                    <p class="text-purple-400 mb-2">The First Inductee</p>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Arriving from the deepest depths of the internet, 0x11 has made a significant mark on the Gorilla Tag fangame community. Known for his skidding, scamming, and flexing, he definitely deserves to be #1 on our list.
-                    </p>
-                </div>
+<main class="container mx-auto mt-8 sm:mt-12 px-4 sm:px-6 lg:px-8">
 
+    <section class="py-12 sm:py-16 md:py-20 text-center">
+        <h1 class="text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-6 text-shadow">
+            The <span class="text-purple-400">Hall of Autism</span>
+        </h1>
+        <p class="text-xl sm:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+            Celebrating the... unique contributions to the digital landscape.
+        </p>
+    </section>
+
+    <section class="py-8 sm:py-12 md:py-16">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-8 text-shadow text-center">Inductees</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-purple-500/30 transition-shadow duration-300">
+                <div class="w-24 h-24 rounded-full mx-auto mb-4 flex items-center justify-center bg-gray-700 text-gray-400 border-2 border-purple-400 text-sm font-semibold">
+                    No Image
                 </div>
-        </section>
+                <h3 class="text-2xl font-semibold text-white mb-1">0x11</h3>
+                <p class="text-purple-400 mb-2">The First Inductee</p>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Arriving from the deepest depths of the internet, 0x11 has made a significant mark on the Gorilla Tag fangame community. Known for his skidding, scamming,
+                    and flexing, he definitely deserves to be #1 on our list.
+                </p>
+            </div>
+        </div>
+    </section>
+</main>
 
-    </main>
+<footer class="text-center py-8 sm:py-10 mt-12 sm:mt-16 border-t border-gray-700">
+    <p class="text-gray-500">&copy; <span id="currentYear"></span> skidding.biz. All rights reserved. Or whatever.</p>
+</footer>
 
-    <footer class="text-center py-8 sm:py-10 mt-12 sm:mt-16 border-t border-gray-700">
-        <p class="text-gray-500">&copy; <span id="currentYear"></span> skidding.biz. All rights reserved. Or whatever.</p>
-    </footer>
+<script>
+    // Set current year in footer
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-    <script>
-        // Set current year in footer
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-    </script>
+    const toggleButton = document.getElementById('darkModeToggle');
+    const htmlElement = document.documentElement;
+
+    // Initialize based on saved preference or system setting
+    const savedTheme = localStorage.getItem('theme');
+
+    if (savedTheme === 'light') {
+        htmlElement.classList.remove('dark');
+        toggleButton.textContent = '🌙 Dark Mode';
+    } else if (savedTheme === 'dark') {
+        htmlElement.classList.add('dark');
+        toggleButton.textContent = '🌞 Light Mode';
+    } else {
+        // Default to dark mode if no preference saved
+        htmlElement.classList.add('dark');
+        toggleButton.textContent = '🌞 Light Mode';
+    }
+
+    toggleButton.addEventListener('click', () => {
+        if (htmlElement.classList.contains('dark')) {
+            htmlElement.classList.remove('dark');
+            toggleButton.textContent = '🌙 Dark Mode';
+            localStorage.setItem('theme', 'light');
+        } else {
+            htmlElement.classList.add('dark');
+            toggleButton.textContent = '🌞 Light Mode';
+            localStorage.setItem('theme', 'dark');
+        }
+    });
+</script>
 
 </body>
 </html>
