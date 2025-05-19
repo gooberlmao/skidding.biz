@@ -1,123 +1,94 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>skidding.biz</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="https://img.icons8.com/?size=512&id=hQVR7vf8MtEn&format=png">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-    .logo-animate {
-      opacity: 0;
-      transform: translateY(-20px);
-      animation: slideDown 0.7s ease-out 0.2s forwards;
-    }
-    @keyframes slideDown {
-      from {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    .text-shadow {
-      text-shadow: 0 1px 3px rgba(0,0,0,0.3);
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>skidding.biz - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .logo-animate {
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: slideDown 0.7s ease-out 0.2s forwards;
+        }
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .text-shadow {
+            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        }
+    </style>
 </head>
-<body class="bg-gray-900 text-gray-200">
+<body class="bg-gray-900 text-gray-200 dark:bg-white dark:text-gray-900">
 
-  <!-- Header -->
-  <header class="py-6 px-4 sm:px-6 lg:px-8 shadow-lg bg-gray-800/50 backdrop-blur-md sticky top-0 z-50">
-    <div class="container mx-auto flex justify-between items-center">
-      <div class="flex items-center space-x-3 logo-animate">
-        <img src="https://img.icons8.com/?size=512&id=hQVR7vf8MtEn&format=png" alt="Logo" class="h-10 w-auto">
-        <div class="text-3xl font-bold text-purple-400">skidding.biz</div>
-      </div>
+    <header class="py-6 px-4 sm:px-6 lg:px-8 shadow-lg bg-gray-800/50 backdrop-blur-md sticky top-0 z-50 flex justify-between items-center">
+        <div class="text-3xl font-bold text-purple-400 logo-animate">
+            <a href="/" class="hover:text-purple-300 transition-colors duration-300">skidding.biz</a>
+        </div>
 
-      <!-- Desktop Nav -->
-      <nav class="hidden md:flex space-x-6">
-        <a href="/op" class="text-lg text-gray-300 hover:text-purple-400 transition-colors duration-300">Our People</a>
-        <a href="/hoa" class="text-lg text-gray-300 hover:text-purple-400 transition-colors duration-300">Hall of Autism</a>
-        <button id="toggleDark" class="text-lg text-gray-300 hover:text-yellow-300 transition-colors duration-300">🌙</button>
-      </nav>
+        <nav class="space-x-6 hidden sm:flex">
+            <a href="/op" class="text-lg text-gray-300 hover:text-purple-400 transition-colors duration-300">Our People</a>
+            <a href="/hoa" class="text-lg text-gray-300 hover:text-purple-400 transition-colors duration-300">Hall of Autism</a>
+        </nav>
 
-      <!-- Mobile Menu Button -->
-      <div class="md:hidden">
-        <button id="menuToggle" class="text-gray-300 hover:text-purple-400 focus:outline-none">
-          ☰
-        </button>
-      </div>
-    </div>
+        <button id="darkModeToggle" class="ml-4 px-3 py-1 rounded bg-purple-600 hover:bg-purple-700 text-white text-sm focus:outline-none">
+            Dark Mode
+        </button>
+    </header>
 
-    <!-- Mobile Nav -->
-    <div id="mobileMenu" class="hidden md:hidden px-4 pt-4 pb-2 space-y-2">
-      <a href="/op" class="block text-gray-300 hover:text-purple-400">Our People</a>
-      <a href="/hoa" class="block text-gray-300 hover:text-purple-400">Hall of Autism</a>
-      <button id="toggleDarkMobile" class="text-gray-300 hover:text-yellow-300">🌙</button>
-    </div>
-  </header>
+    <main class="container mx-auto mt-8 sm:mt-12 px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-5xl font-bold text-white mb-6 text-shadow">Welcome to <span class="text-purple-400">skidding.biz</span></h1>
+        <p class="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+            Your digital hub for unique contributions, community, and more.
+        </p>
+    </main>
 
-  <!-- Main -->
-  <main class="container mx-auto mt-8 sm:mt-12 px-4 sm:px-6 lg:px-8">
-    <section class="text-center py-12 sm:py-16 md:py-20">
-      <h1 class="text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-6 text-shadow">
-        Welcome to <span class="text-purple-400">skidding.biz</span>
-      </h1>
-      <p class="text-xl sm:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-        A focused environment for skids, developers, and anyone who believes they belong in our community.
-      </p>
-    </section>
+    <footer class="text-center py-8 sm:py-10 mt-12 sm:mt-16 border-t border-gray-700">
+        <p class="text-gray-500">&copy; <span id="currentYear"></span> skidding.biz. All rights reserved. Or whatever.</p>
+    </footer>
 
-    <section class="py-12 sm:py-16 md:py-20 flex flex-col md:flex-row items-center gap-8 md:gap-12">
-      <div class="w-full md:w-1/2 lg:w-2/5 rounded-lg overflow-hidden shadow-2xl">
-        <img src="https://media.tenor.com/KKtrsywVssoAAAAe/skid-hacker.png" alt="Operator Terminal" class="w-full h-auto object-cover">
-      </div>
-      <div class="w-full md:w-1/2 lg:w-3/5 text-center md:text-left">
-        <h2 class="text-4xl sm:text-5xl font-bold text-white mb-6 text-shadow">
-          Behind the Interface
-        </h2>
-        <p class="text-lg sm:text-xl text-gray-400 leading-relaxed mb-4">
-          We're not here to blend in. This is a curated environment for builders, analysts, and operators.
-          Transparent where it counts — layered where it matters.
-        </p>
-        <p class="text-lg sm:text-xl text-gray-400 leading-relaxed">
-          Take a closer look. No fluff. Just signals.
-        </p>
-      </div>
-    </section>
-  </main>
+    <script>
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-  <!-- Footer -->
-  <footer class="text-center py-8 sm:py-10 mt-12 sm:mt-16 border-t border-gray-700">
-    <p class="text-gray-500">&copy; <span id="currentYear"></span> skidding.biz. All rights reserved.</p>
-  </footer>
+        // Dark mode toggle logic
+        const toggleButton = document.getElementById('darkModeToggle');
+        const htmlElement = document.documentElement;
 
-  <!-- Scripts -->
-  <script>
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
+        // Load saved preference or default to dark
+        if (localStorage.getItem('theme') === 'light') {
+            htmlElement.classList.remove('dark');
+            toggleButton.textContent = 'Light Mode';
+        } else {
+            htmlElement.classList.add('dark');
+            toggleButton.textContent = 'Dark Mode';
+        }
 
-    // Dark Mode Toggle
-    const toggleDark = () => {
-      document.documentElement.classList.toggle('dark');
-    };
-    document.getElementById('toggleDark').addEventListener('click', toggleDark);
-    document.getElementById('toggleDarkMobile').addEventListener('click', toggleDark);
-
-    // Mobile Menu Toggle
-    document.getElementById('menuToggle').addEventListener('click', () => {
-      const menu = document.getElementById('mobileMenu');
-      menu.classList.toggle('hidden');
-    });
-  </script>
+        toggleButton.addEventListener('click', () => {
+            if (htmlElement.classList.contains('dark')) {
+                htmlElement.classList.remove('dark');
+                toggleButton.textContent = 'Light Mode';
+                localStorage.setItem('theme', 'light');
+            } else {
+                htmlElement.classList.add('dark');
+                toggleButton.textContent = 'Dark Mode';
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+    </script>
 
 </body>
 </html>
